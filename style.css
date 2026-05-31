@@ -1094,8 +1094,35 @@ SECTIONS
     background: url(images/.png) repeat center center rgba(0, 0, 0, 0.7);
 }
 
-.video-section {
+.video-section{
     position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.home-text-wrapper{
+    position: relative;
+    z-index: 2;
 }
 
 .slider-bottom {
