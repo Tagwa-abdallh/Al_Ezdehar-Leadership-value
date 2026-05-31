@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>التوجيه القيادي | مؤسسة الإزدهار</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<style>
+
+ body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+   
+.navbar {
+    margin: 0;
+    width: 100%;
+    background: #000 !important;   /* خلفية سوداء */
+    border: none;
+    border-radius: 0;
+     margin-bottom: 20px;
+     padding: 12px 40px;
+}
+#navbar {
+    padding: 8px 120px;
+}
+
+/* الروابط */
+.navbar-nav > li > a {
+    color: #fff !important;   /* أبيض */
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+/* hover */
+.navbar-nav > li > a:hover {
+    color: #0d6efd !important;  /* أزرق عند المرور */
+}
+
+/* اسم اللوجو لو فيه نص */
+.navbar-brand {
+    color: #fff !important;
+}
+
+/* زر الموبايل */
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/* dropdown */
+.dropdown-menu {
+    background: #111;
+    border: none;
+}
+
+.dropdown-menu > li > a {
+    color: #f2f2f2 !important;
+}
+
+.dropdown-menu > li > a:hover {
+    background: #0d6efd;
+}
+/* HERO */
+
+.event-section{
+    position: relative;
+    height: calc(100vh - 10px); /* ارتفاع الشاشة ناقص الهيدر */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* الفيديو كخلفية */
+.event-section video{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:translate(-50%,-50%);
+    z-index:-2;
+}
+
+/* طبقة شفافة فوق الفيديو */
+.event-section::before{
+    content:"";
+    position:absolute;
+    inset: 0;
+    background:rgba(0,0,0,.6);
+    z-index:-1;
+}
+
+/* المحتوى */
+.custom-hero{
+   
+    padding:40px;
+   
+     position:relative;
+    z-index:2;
+    text-align:center;
+    width:100%;
+    max-width:800px;
+    margin:auto;
+}
+
+/* وسط النص */
+.custom-hero h2{
+    font-size:40px;
+    font-weight:bold;
+    margin-bottom:20px;
+        color: #4a5cffce;
+            text-align:center;
+
+}
+.custom-hero h4{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#e96733;
+        text-align:center;
+
+}
+.custom-hero p{
+      font-size:20px;
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+
+/* CTA */
+.bgcolor1 {
+    background: linear-gradient(270deg, #1f2c3c, #3a7bd5);
+    background-size: 400% 400%;
+    animation: bgMove 10s ease infinite;
+}
+
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ABOUT */
+mark {
+    background: #0d6efd;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+</style>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="header">
+
+    <div class="container-fluid p-0">
+    <nav class="navbar navbar-default yamm">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false">
+
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <div class="logo-normal">
+                    <a class="navbar-brand" href="index.html">
+                    </a>
+                </div>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+              
+                    <li><a href="index.html">الإزدهار</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <!-- الخدمات -->
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            الخدمات <span class="fa fa-angle-down"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="./Training.html">التدريب</a></li>
+                            <li><a href="./consulting.html">الإستشارات</a></li>
+                            <li><a href="./LeadershipCoaching.html">التوجيه القيادي</a></li>
+                            <li><a href="./BooksLibraries.html">الكتب والمكتبات</a></li>
+                            <li><a href="./SmartDevicesTools.html">الأجهزة والأدوات الذكية</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- المؤسسات -->
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            المؤسسات <span class="fa fa-angle-down"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="./LifeTeam.html">فريق الحياة</a></li>
+                            <li><a href="./Intellect_Library.html">مكتبة الفكر</a></li>
+                            <li><a href="./AdvancedTrainingCenter.html">المركز الأعلى</a></li>
+                            <li><a href="./electric_trust.html">شركة إليكترك ترست</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- المزيد -->
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            المزيد <span class="fa fa-angle-down"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="./EmadAldeen.html">المؤسس</a></li>
+                            <li><a href="./Client_Feedback.html">Clients Feedback</a></li>
+                            <li><a href="./Your_Recommendation.html">Your Recommendation</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="./index.html#contact">تواصل معنا</a></li>
+                    <li><a href="./CreatAcount.html">إنشاء حساب</a></li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+    </div>
+
+</header>
+
+<!-- HERO -->
+<section class="parallax event-section">
+    <video autoplay muted loop playsinline>
+        <source src="upload/LeadershipCoaching&Consulting.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 text-center">
+
+                <div class="custom-hero">
+
+                    <h2 style="color:#fff; font-weight:bold;">
+                        التوجيه القيادي
+                    </h2>
+
+                    <h4 style="color:#ddd;">
+                        Leadership Coaching & Consulting
+                    </h4>
+
+                    <p style="color:#eee; max-width:800px; margin:auto; line-height:1.9;">
+                        نقدم جلسات استشارية وكوتشينج قيادي تساعدك على تأسيس المشاريع
+                        وتطوير الأعمال وصناعة القرار القيادي الصحيح،
+                        وبناء مسار مهني واضح للأفراد ورواد الأعمال والمؤسسات.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 hidden-sm hidden-xs">
+                <img src="upload/device_01.png" class="img-responsive wow slideInLeft">
+            </div>
+
+            <div class="col-md-8">
+
+                <mark>التوجيه القيادي</mark>
+
+                <h2>
+                    تطوير القيادة وصناعة القرار وبناء المشاريع بطريقة استراتيجية احترافية.
+                </h2>
+
+                <hr>
+
+                <p>
+                    بالتعاون مع فريق الحياة Life Team نقدم:
+                </p>
+
+                <ul class="check">
+                    <li>جلسات كوتشينـــج  فردية</li>
+                    <li>  برامج كوتشينج جمــاعية</li>
+                    <li> بناء أنظمة استراتيجية للمؤسسات </li>
+                </ul>
+
+                <hr>
+
+                <a href="https://wa.me/24969904488" class="btn btn-primary">
+                    احجز جلسة قيادية
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="section bgcolor1">
+
+    <div class="container">
+
+        <div class="row callout">
+
+            <div class="col-md-4 text-center">
+                <h4>Life Team</h4>
+                <h4>Leadership Support</h4>
+            </div>
+
+            <div class="col-md-8">
+                <p class="lead">
+                    نبني القادة ونصنع الاتجاه الصحيح للمستقبل
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <h3>التوجيه القيادي</h3>
+
+        <p>
+            جلسات استشارية وجلسات وبرامج الكوتشينج القيادي
+        </p>
+
+        <p>
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

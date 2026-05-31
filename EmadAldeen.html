@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EmadAldeen makki</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="./style.css">
+
+<style>
+body{
+  font-family:'Cairo',sans-serif;
+  background:#0f172a;
+  color:#fff;
+   direction:rtl;
+}
+
+.custom-navbar{
+    background:#0f0f0f;
+     padding:0 150px; /* مسافة يمين ويسار */
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    
+}
+
+
+/* للشاشات الصغيرة */
+@media (max-width:768px){
+
+    .custom-navbar{
+        padding:0 20px;
+    }
+
+    .container-fluid{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    .logo-normal{
+        padding: 0;
+    }
+
+    .logo-normal img{
+        width:40px;
+    }
+}
+
+.logo-normal{
+    font-size:24px;
+    font-weight:700;
+    padding:10px;
+}
+.logo-normal img{
+    width:60px;   /* صغر الحجم */
+    height:auto;
+}
+
+.navbar-nav{
+    gap:10px; /* مسافة بين اللينكات */
+    float: right !important;
+    direction: rtl;
+}
+.navbar-nav .nav-link{
+  float: right !important;
+    color:#ffffff;
+    font-size:15px;
+    padding:20px 15px;
+    font-weight:500;
+}
+
+
+/* زر القائمة */
+.navbar-toggler{
+    border:none;
+    font-size:30px;
+    padding:0;
+    margin-right:auto;
+    direction: rtl;
+    color: white;
+}
+.navbar-toggler:focus{
+    box-shadow:none;
+}
+
+.dropdown-menu{
+  right:0;
+    left:auto;
+    border:none;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+      text-align:right;
+    direction:rtl;
+
+}
+
+.dropdown-item{
+    padding:10px 20px;
+    text-align: right;
+}
+.dropdown-menu ul {
+    padding: 0 !important;
+    list-style: none;
+}
+.dropdown-menu li {
+    padding: 0px;
+    margin: 10px 0px;
+    font-size: 15px;
+}
+.dropdown-menu li a {
+    padding: 3px !important;
+            color: #ffffff !important;
+}
+.dropdown-menu li:hover a {
+    padding-left: 10px !important;
+    background-color: transparent;
+    
+}
+.dropdown .dropdown-menu {
+    border-radius: 0;
+   border-radius: 0;
+    border-top: 3px solid #ddd;
+    background-color: #141414 !important;
+    margin: 10px auto 0;
+    padding: 20px 30px;
+    min-width: 200px;
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active{
+    color:#ffffff !important;
+}
+
+
+
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:radial-gradient(circle at top,#1e293b,#020617);
+}
+.hero img{
+  width:180px;
+  border-radius:50%;
+  border:4px solid #38bdf8;
+  margin-bottom:20px;
+  animation:float 4s ease-in-out infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0);} 
+  50%{transform:translateY(-15px);} 
+}
+.hero h1{font-weight:900;font-size:40px;}
+.hero p{color:#94a3b8;}
+
+.about-img{
+    width:100%;
+    max-width:280px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    border:4px solid #38bdf8;
+    transition:0.4s;
+}
+
+.about-img:hover{
+    transform:scale(1.05) rotate(1deg);
+}
+
+.about-text h3{
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    color:#cbd5e1;
+    line-height:1.9;
+}
+
+.skill-card{
+    background:linear-gradient(145deg,#1e293b,#0f172a);
+    padding:30px 20px;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.skill-card i{
+    font-size:30px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.skill-card h4{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.skill-card p{
+    font-size:14px;
+    color:#94a3b8;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    background:linear-gradient(145deg,#2563eb,#7c3aed);
+}
+
+.skill-card:hover i,
+.skill-card:hover p{
+    color:#fff;
+}
+/* SECTION */
+.section{padding:80px 20px;}
+.title{font-weight:800;margin-bottom:40px;text-align:center;}
+
+.service-card{
+    background:linear-gradient(145deg,#1e293b,#0f172a);
+    padding:35px 25px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    border:1px solid rgba(255,255,255,0.05);
+    position:relative;
+    overflow:hidden;
+}
+
+/* أيقونة */
+.service-card i{
+    font-size:35px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+/* عنوان */
+.service-card h4{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+/* وصف */
+.service-card p{
+    color:#94a3b8;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+/* Hover Effect */
+.service-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    background:linear-gradient(145deg,#2563eb,#7c3aed);
+}
+
+
+
+/* CARDS */
+.card-box{
+  background:linear-gradient(145deg,#1e293b,#0f172a);
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+.card-box:hover{
+  transform:translateY(-10px) scale(1.02);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* TAGS */
+.tag{
+  background:#38bdf8;
+  color:#000;
+  padding:6px 12px;
+  border-radius:20px;
+  margin:5px;
+  display:inline-block;
+  font-size:12px;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:60px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+}
+.footer{
+    background:#020617;
+    padding:60px 20px 20px;
+    margin-top:50px;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.footer h4{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* links */
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin-bottom:8px;
+}
+
+.footer-links a{
+    color:#94a3b8;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:#38bdf8;
+}
+
+/* social */
+.footer-social a{
+    display:inline-block;
+    margin:5px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    border-radius:50%;
+    background:#111a2e;
+    color:#fff;
+    transition:0.3s;
+}
+
+.footer-social a:hover{
+    background:#38bdf8;
+    transform:translateY(-5px);
+}
+
+/* bottom */
+.footer-bottom{
+    margin-top:30px;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,0.05);
+    font-size:13px;
+    color:#64748b;
+}
+
+</style>
+</head>
+
+<body >
+
+<header class="header">
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+<div class="container-fluid p-0 ">
+
+    <!-- Logo -->
+    <a class="navbar-brand logo-normal" href="index.html">
+        <img src="./images/Life Team فريق الحياة.png">
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar">
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse " id="navbar">
+
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    الإزدهار
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+
+            <!-- الخدمات -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"
+                   href="#"
+                   data-bs-toggle="dropdown">
+
+                    الخدمات
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a class="dropdown-item" href="./Training.html">التدريب</a></li>
+                    <li><a class="dropdown-item" href="./consulting.html">الإستشارات</a></li>
+                    <li><a class="dropdown-item" href="./LeadershipCoaching.html">التوجيه القيادي</a></li>
+                    <li><a class="dropdown-item" href="./BooksLibraries.html">الكتب والمكتبات</a></li>
+                    <li><a class="dropdown-item" href="./SmartDevicesTools.html">الأجهزة والأدوات الذكية</a></li>
+
+                </ul>
+            </li>
+
+            <!-- المؤسسات -->
+            <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle"
+                   href="#"
+                   data-bs-toggle="dropdown">
+
+                    المؤسسات
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a class="dropdown-item" href="./LifeTeam.html">فريق الحياة</a></li>
+                    <li><a class="dropdown-item" href="./Intellect_Library.html">مكتبة الفكر</a></li>
+                    <li><a class="dropdown-item" href="./AdvancedTrainingCenter.html">المركز الأعلى</a></li>
+                    <li><a class="dropdown-item" href="./electric_trust.html">شركة إليكترك ترست</a></li>
+
+                </ul>
+
+            </li>
+
+            <!-- المزيد -->
+            <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle"
+                   href="#"
+                   data-bs-toggle="dropdown">
+
+                    المزيد
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a class="dropdown-item" href="./EmadAldeen.html">المؤسس</a></li>
+                    <li><a class="dropdown-item" href="./Client_Feedback.html">Clients Feedback</a></li>
+                    <li><a class="dropdown-item" href="./Your_Recommendation.html">Your Recommendation</a></li>
+
+                </ul>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html#contact">
+                    تواصل معنا
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./CreatAcount.html">
+                    إنشاء حساب
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+</nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<img src="images/manager.png">
+<h1>عماد الدين مكي</h1>
+<p>مرشد شخصــــي • استشاري نفسي • خبير في القيــــــــادة</p>
+<a href="https://wa.me/24969904488" class="btn btn-info mt-3">احجز جلسة</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section container">
+  <h2 class="title">من أنا</h2>
+
+  <div class="row align-items-center">
+
+    <!-- IMAGE -->
+    <div class="col-md-5 text-center mb-4">
+      <img src="images/manager.png" class="about-img">
+    </div>
+
+    <!-- TEXT -->
+    <div class="col-md-7">
+      <div class="card-box about-text">
+
+        <h3>عماد الدين مكي</h3>
+
+        <p>
+          مدرب ومرشد شخصي متخصص في تطوير الإنسان وصناعة القادة، بخبرة عميقة في 
+          مجال الكوتشينج والإرشاد النفسي. أعمل على مساعدة الأفراد لاكتشاف قدراتهم 
+          الحقيقية وتحقيق التوازن النفسي والنجاح في حياتهم الشخصية والمهنية.
+        </p>
+
+        <p>
+          قدمت آلاف الجلسات الاستشارية وساهمت في تدريب عشرات الآلاف من الأشخاص، 
+          وأسعى دائمًا لنشر الوعي وبناء جيل واعٍ قادر على القيادة والتغيير.
+        </p>
+
+        <!-- HIGHLIGHTS -->
+        <div class="mt-3">
+          <span class="tag">✔ 5000+ جلسة</span>
+          <span class="tag">✔ 25000+ متدرب</span>
+          <span class="tag">✔ خبير NLP</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SKILLS -->
+<section class="section container" id="SKILLS">
+  <h2 class="title">المهارات</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-3">
+      <div class="skill-card text-center">
+        <i class="fa fa-brain"></i>
+        <h4>NLP</h4>
+        <p>برمجة العقل وتطوير التفكير والسلوك</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="skill-card text-center">
+        <i class="fa fa-users"></i>
+        <h4>Leadership</h4>
+        <p>بناء القادة وإدارة الفرق بفعالية</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="skill-card text-center">
+        <i class="fa fa-comments"></i>
+        <h4>Coaching</h4>
+        <p>جلسات إرشاد لتحقيق الأهداف الشخصية</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="skill-card text-center">
+        <i class="fa fa-lightbulb"></i>
+        <h4>Mindset</h4>
+        <p>تطوير العقلية وصناعة الوعي</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section container" id="Service">
+  <h2 class="title">الخدمات</h2>
+
+  <div class="row g-4">
+
+    <!-- Service 1 -->
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <i class="fa fa-user"></i>
+        <h4>جلسات كوتشينج</h4>
+        <p>
+          جلسات فردية تساعدك على تحقيق أهدافك الشخصية وتطوير ذاتك.
+        </p>
+        <a href="https://wa.me/24969904488" class="btn btn-outline-light btn-sm">احجز الآن</a>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <i class="fa fa-heart"></i>
+        <h4>استشارات نفسية</h4>
+        <p>
+          دعم نفسي متخصص لمساعدتك على تجاوز التحديات وبناء التوازن.
+        </p>
+        <a href="href=https://wa.me/24969904488" class="btn btn-outline-light btn-sm">ابدأ الآن</a>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="col-md-4">
+      <div class="service-card text-center">
+        <i class="fa fa-chart-line"></i>
+        <h4>تدريب قيادي</h4>
+        <p>
+          برامج تدريبية لبناء القادة وتطوير المهارات الإدارية.
+        </p>
+        <a href="https://wa.me/24969904488" class="btn btn-outline-light btn-sm">اعرف أكثر</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section container" id="contact">
+<div class="cta">
+<h2>ابدأ التغيير الآن</h2>
+<p>احجز جلستك وابدأ رحلتك</p>
+<a href="https://wa.me/24969904488" class="btn btn-dark">واتساب</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- ABOUT -->
+      <div class="col-md-4">
+        <h4>عن المدرب</h4>
+        <p>
+          عماد الدين مكي، مرشد شخصي واستشاري نفسي متخصص في تطوير الإنسان 
+          وبناء القادة وصناعة الوعي.
+        </p>
+      </div>
+
+      <!-- LINKS -->
+      <div class="col-md-4">
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li ><a class="nav-link" href="./EmadAldeen.html">الرئيسية</a></li>
+        <li ><a class="nav-link" href="#SKILLS">المهارات</a></li>
+        <li ><a class="nav-link" href="#Service">الخدمات</a></li>
+        <li><a class="nav-link" href="#contact">تواصل</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="col-md-4 text-center">
+        <h4>تابعني</h4>
+
+        <div class="footer-social">
+            
+
+  <a href="https://whatsapp.com/channel/0029VaqUnVtBqbrAIfhCfC0j"><i class="fab fa-whatsapp"></i></a>
+    <a href="  https://www.facebook.com/LEADERSHIPLifevalue"><i class="fab fa-facebook-f"></i></a>
+
+  <a href="https://youtube.com/channel/UCSx0r5ANZxN2zkfM-x9kuLw?si=NIngpzya00--9OaY"><i class="fab fa-youtube"></i></a>
+  <a href="https://t.me/LEADERSHIPLifevalue"><i class="fab fa-telegram"></i></a>
+  <a href="https://www.instagram.com/leadershiplifevalue?utm_source=qr&igsh=b3k0cWFqaW4zY3N3"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@leadershiplifevalue?_r=1&_t=ZS-945aHbSGjYn"><i class="fab fa-tiktok"></i></a>
+</div>
+
+        <p class="mt-3" >📱 WhatsApp: 24969904488</p>
+      </div>
+
+    </div>
+
+    <!-- COPY -->
+    <div class="footer-bottom text-center">
+      © 2026 جميع الحقوق محفوظة - عماد الدين مكي
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

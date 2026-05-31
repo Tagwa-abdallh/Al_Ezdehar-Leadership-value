@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ar" dir="rtl"> <!--<![endif]-->
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <title>Edulogy</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
+    
+    <!-- Custom & Default Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<style>
+.navbar-brand{
+    padding:10px 0;
+    display:flex;
+    align-items:center;
+    width:100px;
+}
+
+/* قسم الفيديو */
+.video-section{
+    position:relative;
+    overflow:hidden;
+    height:100vh;
+}
+
+/* الفيديو */
+.bg-video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+/* الطبقة الشفافة */
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:-1;
+}
+
+/* محتوى النص */
+.content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:2;
+    color:white;
+    width:100%;
+    text-align:center;
+}
+</style>
+<body>  
+
+
+  <header class="header">
+
+  <div class="container">
+    <nav class="navbar navbar-default yamm">
+
+      <!-- LOGO + MOBILE -->
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false">
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/Life Team فريق الحياة.png" alt="logo">
+        </a>
+
+      </div>
+
+      <!-- MENU -->
+      <div id="navbar" class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <li><a href="index.html">مؤسسة الإزدهار</a></li>
+          <li><a href="#about">من نحن</a></li>
+
+          <!-- الخدمات -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              الخدمات <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="Training.html">التدريب</a></li>
+              <li><a href="consulting.html">الإستشارات</a></li>
+              <li><a href="LeadershipCoaching.html">التوجيه القيادي</a></li>
+              <li><a href="BooksLibraries.html">الكتب والمكتبات</a></li>
+              <li><a href="SmartDevicesTools.html">الأجهزة والادوات الذكية</a></li>
+            </ul>
+          </li>
+
+          <!-- المؤسسات -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              المؤسسات <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="LifeTeam.html">فريق الحياة</a></li>
+              <li><a href="./Intellect_Library.html">مكتبة الفكر</a></li>
+              <li><a href="AdvancedTrainingCenter.html">المركز الأعلى</a></li>
+              <li><a href="./electric_trust.html">إلكترك ترست</a></li>
+            </ul>
+          </li>
+
+          <!-- المزيد -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              المزيد <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="EmadAldeen.html">المؤسس</a></li>
+              <li><a href="./Client_Feedback.html">آراء العملاء</a></li>
+              <li><a href="./Your_Recommendation.html">اقتراحاتك</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#contact">تواصل معنا</a></li>
+          <li><a href="CreatAcount.html">إنشاء حساب</a></li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+  </div>
+
+</header>
+<section class="video-section">
+
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="./upload/life-team1.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tagline-message event-title">
+                    <h3>فريق الحياة</h3>
+                    <h3>Life Team</h3>
+                    <p>للإستشارات وتنظيم البرامج والفعاليات</p>
+                    <a href="#" class="btn btn-default">المزيد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 hidden-sm hidden-xs">
+                        <div class="custom-module">
+                            <img src="upload/device_01.png" alt="" class="img-responsive wow slideInLeft">
+                        </div><!-- end module -->
+                    </div><!-- end col -->
+                    <div class="col-md-8">
+                        <div class="custom-module p40l">
+                            <mark>رؤيتنا</mark> 
+<h2> الفريق الرائد في مجال الإستشارات والعلاج والكوتشينح وتنظيم البرامج والفعاليات في السودان والعالم العربي بنهاية العام 2030م</h2>                           
+    <mark>رسالتنا</mark> 
+<h2> مساعدة المجتمعات على التشافي النفسي والعقلي والجسدي والروحي من اجل غرس القيم والأخلاق الرفيعة والإرتقاء بالإنسانية</h2>
+                            <hr class="invis">
+                            
+                            
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 last"></div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 last">
+                                    <mark>مبادئنا</mark>
+                                    <ul class="check">
+
+                                        <li>العمل بروح الفريق </li>
+                                        <li>قوة الإدارة والإلتزام</li>
+                                        <li>المعرفة والتطوير المستمر</li>
+                                        
+                                        
+                                    </ul><!-- end check -->    
+                                </div><!-- end col-lg-4 -->
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 first">
+                                    <mark>قيمنا</mark>
+                                    <ul class="check">
+
+                                        <li>الأخلاق </li>
+                                        <li>الإبداع</li>
+                                        <li>الفعالية</li>
+                                        <li>الشفافية</li>
+                                        <li>النمو الإرتقاء</li>
+                                        
+                                    </ul><!-- end check -->    
+
+                                </div><!-- end col-lg-4 -->
+                                
+                                
+                            </div><!-- end row -->   
+
+                            <hr class="invis">
+
+                            <div class="btn-wrapper">
+                                <a href="#" class="btn btn-default">قراءة المزيد </a>
+                            </div>
+
+                        </div><!-- end module -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <section class="section bgcolor1">
+            <div class="container">
+                <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p">
+                <div class="row callout">
+                    <div class="col-md-4 text-center">
+                        <h3>2020</h3>
+                        <h4>انضم الى مجتمعنـــــــــــــــــــــا</h4>
+                    </div><!-- end col -->
+
+                    <div class="col-md-8">
+                        <p class="lead">معاَ نرتقـــي بالحيــــــــــــاة  </p>
+                        <p class="lead"> فريق الحياة Life Team</p>
+                    </div>
+                </div><!-- end row -->
+                </a>
+            </div><!-- end container -->  
+        </section>
+
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>مكونات فريق الحياة  Life Team</h3>
+                </div><!-- end title -->
+
+                <div class="row text-center">
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="teammembers">
+                            <div class="entry">
+                                <img src="upload/03_team.png" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                    <div class="visible-buttons1 teambuttons">
+                                        <p>ذكاء Inteligence ، تأثير Influence ، إلهام Inspiration</p>
+                                        <div class="social-links">
+                                            <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                            <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                            <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
+                                        </div><!-- end social -->
+                                    </div>
+                                </div>
+                            </div><!-- end box -->
+                            <div class="teamdesc">
+                                <h4>نادي القيادة Leadership Clup</h4>
+                                <p>ذكاء  ، تأثير ، إلهام </p>
+                            </div><!-- end teamdesc -->
+                        </div><!-- end teammembers -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="teammembers">
+                            <div class="entry">
+                                <img src="upload/02_team.png" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                    <div class="visible-buttons1 teambuttons">
+                                        <p>أفكار  ، عمليات  ، إستراتيجيات </p>
+                                        <div class="social-links">
+                                            <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                            <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                            <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
+                                        </div><!-- end social -->
+                                    </div>
+                                </div>
+                            </div><!-- end box -->
+                            <div class="teamdesc">
+                                <h4>نادي البرمجة NLP Clup</h4>
+                                <p>أفكار  ، عمليات  ، استراتيجيات </p>
+                            </div><!-- end teamdesc -->
+                        </div><!-- end teammembers -->
+                    </div><!-- end col -->
+
+                    
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="teammembers">
+                            <div class="entry">
+                                <img src="upload/01_team.png" alt="" class="img-responsive">
+                                <div class="magnifier">
+                                    <div class="visible-buttons1 teambuttons">
+                                        <p> فكري ntellectual ، ثقافي Cultural ، إجتماعي Community</p>
+                                        <div class="social-links">
+                                            <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                            <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                            <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
+                                        </div><!-- end social -->
+                                    </div>
+                                </div>
+                            </div><!-- end box -->
+                            <div class="teamdesc">
+                                <h4>نادي الحياة Life Club</h4>
+                                <p> فكري  ، ثقافي  ، إجتماعي </p>
+                            </div><!-- end teamdesc -->
+                        </div><!-- end teammembers -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+
+        
+        <footer class="section footer noover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">صفحاتنا</h3>
+                            <div class="list-widget">   
+                                <ul>
+                                    <li><a href="https://t.me/LTCLifevalue">تلغرام</a></li>
+                                    <li><a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p">واتساب</a></li>
+                                    <li><a href="https://www.facebook.com/LTCLifevalue/">فيسبوك</a></li>
+                                    
+                                    
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">تواصل معنا</h3>
+                            <div class="list-widget">   
+                                <ul>
+                                    <li><a href="https://wa.me/00249960010022" target="_blank">
+  راسلنا على واتساب
+</a></li>
+                                   <a href="mailto:ltclifevalue@gmail.com">إرســـــــال إيــمــــيـــــل</a>
+                                    <li><a href="tel:+2497869989898">
+  اتـــــصـــــل بـــنــــــــــــا
+</a></li>
+                                    
+                                    
+                                    
+                                </ul>
+                            </div><!-- end list-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">فريق الحياة Life Team</h3>
+                            <div class="newsletter-widget">
+                                <p>الفريق الرائد في مجال الإستشارات وتنظيم الفعاليات<br> قراءة المزيد <a href="./LifeTeam.html">LifeTeam</a>.</p>
+                                
+                            </div><!-- end newsletter -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        
+    </div><!-- end wrapper -->
+
+    <!-- jQuery Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- VIDEO BG PLUGINS -->
+    <script src="js/videobg.js"></script>
+
+</body>
+</html>

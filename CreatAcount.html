@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>الدخول / إنشاء حساب | مؤسسة الإزدهار</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: #f5f7fa;
+        }
+
+        .auth-box {
+            max-width: 650px;
+            margin: 80px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-tabs {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 12px;
+            height: 45px;
+        }
+
+        textarea.form-control {
+            height: 90px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            height: 45px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="auth-box">
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a data-toggle="tab" href="#login">تسجيل الدخول</a></li>
+            <li><a data-toggle="tab" href="#register">إنشاء حساب</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!-- LOGIN -->
+            <div id="login" class="tab-pane fade in active">
+
+                <h3>تسجيل الدخول</h3>
+
+                <form>
+                    <input type="email" class="form-control" placeholder="الإيميل">
+
+                    <input type="password" class="form-control" placeholder="كلمة المرور">
+
+                    <button type="submit" class="btn btn-primary">
+                        دخول
+                    </button>
+                </form>
+
+            </div>
+
+            <!-- REGISTER -->
+            <div id="register" class="tab-pane fade">
+
+                <h3>إنشاء حساب جديد</h3>
+
+                <form>
+
+                    <input type="text" class="form-control" placeholder="الاسم">
+
+                    <input type="text" class="form-control" placeholder="الجنسية">
+
+                    <input type="text" class="form-control" placeholder="الإقامة الحالية">
+
+                    <input type="text" class="form-control" placeholder="رقم الواتساب">
+
+                    <input type="text" class="form-control" placeholder="رقم المكالمات">
+
+                    <input type="email" class="form-control" placeholder="الإيميل الشخصي">
+
+                    <input type="text" class="form-control" placeholder="التخصص أو مجال العمل">
+
+                    <button type="submit" class="btn btn-primary">
+                        إنشاء حساب
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

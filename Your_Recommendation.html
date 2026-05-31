@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     
+  <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+	
+  <!-- Custom & Default Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+<style>
+
+body{
+    margin:0;
+    padding:0;   /* احذفي padding-top */
+    font-size:20px;
+}
+
+ /* HEADER */
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+}
+/* اجعل الهيدر يملأ الشاشة */
+.header .container{
+    width:100%;
+    max-width:100%;
+    padding-left:0;
+    padding-right:0;
+}
+
+.navbar{
+    width:100%;
+    margin:0;
+    padding:15px 30px;
+    background:#020202;
+    border:none;
+    border-radius:0;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+/* اللوجو */
+.navbar-brand{
+    width:120px;
+    padding:0;
+}
+
+.navbar-brand img{
+    width:100%;
+    height:auto;
+}
+#navbar {
+    padding: 8px 120px;
+}
+/* الروابط */
+.navbar-nav > li > a{
+    font-size:18px !important;
+    font-weight:bold;
+    color:#222 !important;
+    transition:.3s;
+    padding: 20px;
+}
+
+/* Hover */
+.navbar-nav > li > a:hover{
+    color:#f39c12 !important;
+}
+
+/* عند الاسكرول */
+.navbar.scrolled{
+    background:#0d1b2a !important;
+}
+
+.navbar.scrolled .navbar-nav > li > a{
+    color:#fff !important;
+}
+
+/* قائمة الموبايل */
+.navbar-toggle .icon-bar{
+    background:#333;
+}
+
+.dropdown-menu{
+    background:#fff;
+}
+
+.dropdown-menu > li > a{
+    color:#f2f2f2  !important;
+}
+.section{
+  padding:100px 0;
+  margin: 50px auto;
+}
+.hero-reco{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("upload/Your_Recommendation.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:#fff;
+}
+h1{
+  font-size: 40px;
+  font-weight: bold;
+  color: #f39c12;
+}
+p{
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.card-box{
+  background:#fff;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.form-control{
+  border-radius:10px;
+  padding:12px;
+}
+</style>
+<body>
+  <!-- NAVBAR -->
+<header class="header">
+
+  <div class="container">
+    <nav class="navbar navbar-default yamm">
+
+      <!-- LOGO + MOBILE -->
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false">
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/Intellect Library مكتبة الفكر.png" alt="logo">
+        </a>
+
+      </div>
+
+      <!-- MENU -->
+      <div id="navbar" class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <li><a href="index.html">مؤسسة الإزدهار</a></li>
+          <li><a href="#about">من نحن</a></li>
+
+          <!-- الخدمات -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              الخدمات <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="Training.html">التدريب</a></li>
+              <li><a href="consulting.html">الإستشارات</a></li>
+              <li><a href="LeadershipCoaching.html">التوجيه القيادي</a></li>
+              <li><a href="BooksLibraries.html">الكتب والمكتبات</a></li>
+              <li><a href="SmartDevicesTools.html">الأجهزة والادوات الذكية</a></li>
+            </ul>
+          </li>
+
+          <!-- المؤسسات -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              المؤسسات <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="LifeTeam.html">فريق الحياة</a></li>
+              <li><a href="./Intellect_Library.html">مكتبة الفكر</a></li>
+              <li><a href="AdvancedTrainingCenter.html">المركز الأعلى</a></li>
+              <li><a href="./electric_trust.html">إلكترك ترست</a></li>
+            </ul>
+          </li>
+
+          <!-- المزيد -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              المزيد <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="EmadAldeen.html">المؤسس</a></li>
+              <li><a href="./Client_Feedback.html">آراء العملاء</a></li>
+              <li><a href="./Your_Recommendation.html">اقتراحاتك</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#contact">تواصل معنا</a></li>
+          <li><a href="CreatAcount.html">إنشاء حساب</a></li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+  </div>
+
+</header>
+    
+
+<section class="hero-reco">
+
+  <div class="container text-center">
+
+    <h1> اقتراحاتك</h1>
+    <p>شارك أفكارك لتطوير خدماتنا ومشاريعنا</p>
+
+  </div>
+
+</section>
+
+<section class="section" id="form">
+
+  <div class="container">
+
+    <div class="text-center">
+      <h2> أضف اقتراحك</h2>
+      <br>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3">
+
+        <div class="card-box">
+
+          <form>
+
+            <div class="form-group">
+              <input type="text" class="form-control text-center" placeholder="اسمك">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <input type="text" class="form-control text-center" placeholder="عنوان الاقتراح">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <textarea class="form-control text-center" rows="5" placeholder="اكتب اقتراحك هنا..."></textarea>
+            </div>
+
+            <br>
+
+            <button class="btn btn-warning btn-block">
+              إرسال الاقتراح
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="ideas" style="background:#eef2f7;">
+
+  <div class="container">
+
+    <div class="text-center">
+      <h2>💭 أفكار سابقة</h2>
+      <br>
+    </div>
+
+    <div class="row g-4">
+
+
+      <div class="col-md-6">
+        <div class="card-box text-center">
+          <h4>خدمات جديدة</h4>
+          <p>إضافة خدمات استشارات أونلاين عبر الفيديو</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-box text-center">
+          <h4>نظام حجز</h4>
+          <p>إنشاء نظام حجز مواعيد ذكي</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer style="background:#0d1b2a; color:#fff; text-align:center; padding:30px;">
+
+  <p>  جميـــــع الحقوق محفوظة  - [ 2026 ] - Your Recommendations </p>
+
+</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

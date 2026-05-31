@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Electric Trust | إلكترك ترست</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<style>
+ body {
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    width: 100px;
+
+}
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+   
+/* HERO */
+.hero{
+    position: relative;
+    overflow: hidden;
+    color:#fff;
+    text-align:center;
+    padding:230px 20px;
+}
+
+/* الفيديو */
+.hero video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    transform:translate(-50%,-50%);
+    z-index:-2;
+    object-fit:cover;
+}
+
+/* طبقة شفافة فوق الفيديو */
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+    z-index:-1;
+}
+
+.hero h1{
+    font-size:45px;
+    font-weight:bold;
+    color: #ffffff;
+}
+
+
+
+.hero p{
+    color:#eee;
+    font-size:18px;
+    margin-top:15px;
+}
+
+    /* SPACING BETWEEN SECTIONS */
+    section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .card-box{
+      background:#fff;
+      border-radius:15px;
+      padding:25px;
+      box-shadow:0 5px 20px rgba(0,0,0,.08);
+      transition:.3s;
+      height:100%;
+    }
+
+    .card-box:hover{
+      transform:translateY(-5px);
+    }
+
+    .icon{
+      font-size:35px;
+      color:#f39c12;
+      margin-bottom:15px;
+    }
+
+    .contact-box{
+      background:#0d1b2a;
+      color:#fff;
+      padding:40px;
+      border-radius:15px;
+    }
+
+    a{text-decoration:none;}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="header">
+
+  <div class="container">
+    <nav class="navbar navbar-default yamm">
+
+      <!-- LOGO + MOBILE -->
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false">
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/Electric Trust إلكترك ترست.jpg" alt="logo">
+        </a>
+
+      </div>
+
+      <!-- MENU -->
+      <div id="navbar" class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <li><a href="index.html">مؤسسة الإزدهار</a></li>
+          <li><a href="#about">من نحن</a></li>
+
+          <!-- الخدمات -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              الخدمات <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="Training.html">التدريب</a></li>
+              <li><a href="consulting.html">الإستشارات</a></li>
+              <li><a href="LeadershipCoaching.html">التوجيه القيادي</a></li>
+              <li><a href="BooksLibraries.html">الكتب والمكتبات</a></li>
+              <li><a href="SmartDevicesTools.html">الأجهزة والادوات الذكية</a></li>
+            </ul>
+          </li>
+
+          <!-- المؤسسات -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              المؤسسات <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="LifeTeam.html">فريق الحياة</a></li>
+              <li><a href="./Intellect_Library.html">مكتبة الفكر</a></li>
+              <li><a href="AdvancedTrainingCenter.html">المركز الأعلى</a></li>
+              <li><a href="./electric_trust.html">إلكترك ترست</a></li>
+            </ul>
+          </li>
+
+          <!-- المزيد -->
+          <li class="dropdown hassubmenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              المزيد <span class="fa fa-angle-down"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="EmadAldeen.html">المؤسس</a></li>
+              <li><a href="./Client_Feedback.html">آراء العملاء</a></li>
+              <li><a href="./Your_Recommendation.html">اقتراحاتك</a></li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#contact">تواصل معنا</a></li>
+          <li><a href="CreatAcount.html">إنشاء حساب</a></li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+  </div>
+
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <video autoplay muted loop playsinline>
+        <source src="upload/Electric-Trust.mp4" type="video/mp4">
+    </video> 
+  <h1> إلكترك ترست Electric Trust</h1>
+  <p>الطاقة الشمسية | كاميرات المراقبة | الأجهزة الذكية</p>
+</section>
+
+
+<!-- VISION -->
+<section id="vision" style="background:#eef2f7;" >
+  <div class="container">
+
+    <div class="row g-4">
+
+      
+
+      <div class="col-md-6">
+        <div class="card-box">
+          <h3> رسالتنا</h3>
+          <p>توفير بيئة كهربائية آمنة ودعم فني سريع وفعّال.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-box">
+          <h3> رؤيتنا</h3>
+          <p>الشركة الرائدة في مجال الطاقة الشمسية وكاميرات المراقبة حتى 2033.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- VALUES -->
+ <section>
+  <div class="container text-center">
+
+    <h2 class="section-title">قيمنا</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4"><div class="card-box"> الموثوقية</div></div>
+            <div class="col-md-4"><div class="card-box"> المعرفة</div></div>
+
+      <div class="col-md-4"><div class="card-box"> الأمان</div></div>
+
+    </div>
+
+  </div>
+ </section>
+ 
+ <section>
+  
+  <div class="container text-center">
+
+    <h2 class="section-title">مبادئنا</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4"><div class="card-box">الإبداع</div></div>
+      <div class="col-md-4"><div class="card-box"> الإبتكار</div></div>
+      <div class="col-md-4"><div class="card-box">الإلتزام </div></div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>خدماتنا</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card-box text-center">
+          <div class="icon">🔆</div>
+          <h4>الطاقة الشمسية</h4>
+          <p>حلول طاقة نظيفة وفعالة للمنازل والمشاريع.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-box text-center">
+          <div class="icon">📷</div>
+          <h4>كاميرات المراقبة</h4>
+          <p>أنظمة حماية ومراقبة عالية الجودة.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-box text-center">
+          <div class="icon">⚡</div>
+          <h4>الأجهزة الذكية</h4>
+          <p>أدوات ومعدات كهربائية وإلكترونية حديثة.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" style="background:#0d1b2a;">
+  <div class="container">
+
+    <div class="contact-box text-center">
+
+      <h2> تواصل معنا</h2>
+      <br>
+
+      <a href="https://wa.me/249966509900" class="btn btn-warning">واتساب مباشر</a>
+
+      <hr>
+      <p> الســـــودان - النيـــل الأبيــــض</p>
+
+      <p> ETCLifevalue@gmail.com</p>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
