@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!--[if lt IE 9]>
         <script src="js/vendor/html5shiv.min.js"></script>
@@ -52,17 +55,28 @@
     height:100vh;
 }
 
-/* الفيديو */
-.bg-video{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    z-index:-2;
-}
 
+/* الفيديو */
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* ملء عرض الشاشة بالكامل */
+    height: 100vh; /* ملء ارتفاع الشاشة بالكامل */
+    object-fit: cover; /* لضمان عدم تشويه الفيديو وقصه ليمتد بالكامل */
+    transform: translate(-50%, -50%); /* لضمان توسيط الفيديو تماماً */
+    z-index: -2;
+}
+.tagline-message h3{
+    color: rgb(18, 122, 65);
+    font-size: 20px;
+    font-weight: bold;
+}
+.tagline-message h4{
+    color: rgb(4, 4, 170);
+    font-size: 39px;
+    font-weight: bold;
+}
 /* الطبقة الشفافة */
 .overlay{
     position:absolute;
@@ -174,12 +188,13 @@
   </div>
 
 </header>
-<section class="video-section">
+<section class="video-section js-height-full">
 
     <video autoplay muted loop playsinline class="bg-video">
         <source src="./upload/life-team1.mp4" type="video/mp4">
     </video>
 
+    
     <div class="overlay"></div>
 
     <div class="container content">
@@ -187,9 +202,8 @@
             <div class="col-md-12">
                 <div class="tagline-message event-title">
                     <h3>فريق الحياة</h3>
-                    <h3>Life Team</h3>
+                    <h4>Life Team</h4>
                     <p>للإستشارات وتنظيم البرامج والفعاليات</p>
-                    <a href="#" class="btn btn-default">المزيد</a>
                 </div>
             </div>
         </div>
@@ -249,7 +263,7 @@
                             <hr class="invis">
 
                             <div class="btn-wrapper">
-                                <a href="#" class="btn btn-default">قراءة المزيد </a>
+                                <a href="https://wa.me/249115404333" class="btn btn-default">تواصل معنا  </a>
                             </div>
 
                         </div><!-- end module -->
@@ -277,84 +291,141 @@
         </section>
 
 
-        <section class="section">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h3>مكونات فريق الحياة  Life Team</h3>
-                </div><!-- end title -->
+       <section class="section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>مكونات فريق الحياة Life Team</h3>
+        </div><!-- end title -->
 
-                <div class="row text-center">
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="teammembers">
-                            <div class="entry">
-                                <img src="upload/03_team.png" alt="" class="img-responsive">
-                                <div class="magnifier">
-                                    <div class="visible-buttons1 teambuttons">
-                                        <p>ذكاء Inteligence ، تأثير Influence ، إلهام Inspiration</p>
-                                        <div class="social-links">
-                                            <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
-                                            <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
-                                            <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
-                                        </div><!-- end social -->
-                                    </div>
+        <!-- الصف الأول: يحتوي على 3 عناصر -->
+        <div class="row text-center">
+            
+            <!-- العنصر الأول -->
+            <div class="col-md-4 col-sm-6">
+                <div class="teammembers">
+                    <div class="entry">
+                        <img src="upload/03_team.png" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <div class="visible-buttons1 teambuttons">
+                                <p>ذكاء Inteligence ، تأثير Influence ، إلهام Inspiration</p>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
                                 </div>
-                            </div><!-- end box -->
-                            <div class="teamdesc">
-                                <h4>نادي القيادة Leadership Clup</h4>
-                                <p>ذكاء  ، تأثير ، إلهام </p>
-                            </div><!-- end teamdesc -->
-                        </div><!-- end teammembers -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamdesc">
+                        <h4>نادي الحياة Leadership Club</h4>
+                        <p>ذكاء ، تأثير ، إلهام</p>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="col-md-4 col-sm-6">
-                        <div class="teammembers">
-                            <div class="entry">
-                                <img src="upload/02_team.png" alt="" class="img-responsive">
-                                <div class="magnifier">
-                                    <div class="visible-buttons1 teambuttons">
-                                        <p>أفكار  ، عمليات  ، إستراتيجيات </p>
-                                        <div class="social-links">
-                                            <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
-                                            <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
-                                            <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
-                                        </div><!-- end social -->
-                                    </div>
+            <!-- العنصر الثاني -->
+            <div class="col-md-4 col-sm-6">
+                <div class="teammembers">
+                    <div class="entry">
+                        <img src="upload/02_team.png" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <div class="visible-buttons1 teambuttons">
+                                <p>أفكار ، عمليات ، إستراتيجيات</p>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
                                 </div>
-                            </div><!-- end box -->
-                            <div class="teamdesc">
-                                <h4>نادي البرمجة NLP Clup</h4>
-                                <p>أفكار  ، عمليات  ، استراتيجيات </p>
-                            </div><!-- end teamdesc -->
-                        </div><!-- end teammembers -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamdesc">
+                        <h4>نادي البرمجة NLP Club</h4>
+                        <p>أفكار ، عمليات ، استراتيجيات</p>
+                    </div>
+                </div>
+            </div>
 
-                    
-
-                    <div class="col-md-4 col-sm-6">
-                        <div class="teammembers">
-                            <div class="entry">
-                                <img src="upload/01_team.png" alt="" class="img-responsive">
-                                <div class="magnifier">
-                                    <div class="visible-buttons1 teambuttons">
-                                        <p> فكري ntellectual ، ثقافي Cultural ، إجتماعي Community</p>
-                                        <div class="social-links">
-                                            <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
-                                            <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
-                                            <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
-                                        </div><!-- end social -->
-                                    </div>
+            <!-- العنصر الثالث -->
+            <div class="col-md-4 col-sm-6">
+                <div class="teammembers">
+                    <div class="entry">
+                        <img src="upload/01_team.png" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <div class="visible-buttons1 teambuttons">
+                                <p>فكري Intellectual ، ثقافي Cultural ، إجتماعي Community</p>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
                                 </div>
-                            </div><!-- end box -->
-                            <div class="teamdesc">
-                                <h4>نادي الحياة Life Club</h4>
-                                <p> فكري  ، ثقافي  ، إجتماعي </p>
-                            </div><!-- end teamdesc -->
-                        </div><!-- end teammembers -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamdesc">
+                        <h4>نادي البزنس Life Club</h4>
+                        <p>فكري ، ثقافي ، إجتماعي</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end row 1 -->
+
+        <hr class="invis"> <!-- خط وهمي لإضافة مسافة بسيطة بين الصفين -->
+
+        <!-- الصف الثاني: يحتوي على العنصرين المتبقيين -->
+        <div class="row text-center">
+
+            <!-- العنصر الرابع -->
+            <div class="col-md-6 col-sm-6">
+                <div class="teammembers">
+                    <div class="entry">
+                        <img src="upload/01_team.png" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <div class="visible-buttons1 teambuttons">
+                                <p>فكري Intellectual ، ثقافي Cultural ، إجتماعي Community</p>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamdesc">
+                        <h4>نادي التكنولوجيا  </h4>
+                        <p>فكري ، ثقافي ، إجتماعي</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العنصر الخامس -->
+            <div class="col-md-6 col-sm-6">
+                <div class="teammembers">
+                    <div class="entry">
+                        <img src="upload/01_team.png" alt="" class="img-responsive">
+                        <div class="magnifier">
+                            <div class="visible-buttons1 teambuttons">
+                                <p>فكري Intellectual ، ثقافي Cultural ، إجتماعي Community</p>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/LTCLifevalue/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://whatsapp.com/channel/0029VaifRmD8vd1O0TlRD30p"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="https://t.me/LTCLifevalue"><i class="fa fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamdesc">
+                        <h4>نادي القيادة </h4>
+                        <p>فكري ، ثقافي ، إجتماعي</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end row 2 -->
+        
+    </div><!-- end container -->
+</section>
 
 
         
