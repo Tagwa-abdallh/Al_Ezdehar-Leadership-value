@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 <style>
@@ -22,6 +25,7 @@
 }
 .navbar-brand img {
     width: 150px;
+  
 }
 .hero-intellect{
     position:relative;
@@ -73,14 +77,14 @@
     font-size:40px;
     font-weight:bold;
     margin-bottom:20px;
-        color: #4a5cffce;
+        color: #23338d;
 
 }
 
 .hero-intellect h3{
     font-size:30px;
     margin-bottom:20px;
-    color:#e96733;
+    color:#fc8151;
 
 }
 
@@ -135,7 +139,6 @@
     margin-bottom:10px;
 }
 
-/* وصف */
 .service-card p{
     color:hsl(215, 20%, 65%);
     font-size:14px;
@@ -147,7 +150,43 @@
     transform:translateY(-12px) scale(1.03);
     background:linear-gradient(145deg,#f8f8f8,#e8e8e9);
 }
+/* تحسين الخطوط للقوائم   */
+.card-box ul {
+    padding-right: 20px; /* ليتناسب مع اتجاه اليمين لليسار */
+    margin-top: 10px;
+}
 
+.card-box ul li {
+    font-size: 18px; /* تكبير حجم الخط على الشاشات */
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* تعديلات خاصة بالشاشات الصغيرة (الهواتف) */
+@media (max-width: 767px) {
+    .hero-intellect h1 {
+        font-size: 28px; /* تصغير العنوان الرئيسي ليناسب الهاتف */
+    }
+    .hero-intellect h3 {
+        font-size: 22px;
+    }
+    .hero-intellect p {
+        font-size: 16px;
+    }
+    .card-box h3 {
+        font-size: 22px; /* تكبير عناوين الكروت على الهاتف */
+    }
+    .card-box ul li {
+        font-size: 18px; /* ضمان وضوح المبادئ والقيم على الهاتف */
+    }
+    .title {
+        font-size: 24px;
+    }
+    .service-card h4 {
+        font-size: 18px;
+    }
+}
 
 
 </style>
@@ -259,13 +298,14 @@
 </section>
 
 
-<section class="section" id="about">
-
+<section class="section book" id="about">
   <div class="container">
-     <div class="row g-4">
-      <div class="col-md-6">
+    
+     <!-- الصف الأول: الرسالة والرؤية -->
+     <div class="row">
+      <div class="col-xs-12 col-sm-6 box-2" style="margin-bottom: 20px;">
         <div class="card-box">
-          <h3> رسالتنا</h3>
+          <h3>رسالتنا</h3>
           <p>
             مساعدة المجتمعات علميًا وترسيخ قيمة القراءة
             وبناء الإنسان معرفيًا وفكريًا.
@@ -273,9 +313,9 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-xs-12 col-sm-6 box-1" style="margin-bottom: 20px;">
         <div class="card-box">
-          <h3> رؤيتنا</h3>
+          <h3>رؤيتنا</h3>
           <p>
             المكتبة الرائدة في البناء الفكري والثقافي والمعرفي
             عبر الكتب والمرجعيات الموثوقة حتى 2033.
@@ -283,29 +323,23 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="container ">
-   
 
-    <div class="row g-4">
-
-      
-
-      <div class="col-md-6">
+    <!-- الصف الثاني: المبادئ والقيم -->
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-xs-12 col-sm-6 box-4" style="margin-bottom: 20px;">
         <div class="card-box">
-          <h3> مبادئنا</h3>
+          <h3>مبادئنا</h3>
           <ul>
-            <li> الإلتزام</li>
-            <li> الإرادة</li>
-            <li> الإستمرارية</li>
+            <li>الإلتزام</li>
+            <li>الإرادة</li>
+            <li>الإستمرارية</li>
           </ul>
         </div>
       </div>
       
-
-      <div class="col-md-6">
-        <div class="card-box">
-          <h3> قيمنا</h3>
+      <div class="col-xs-12 col-sm-6">
+        <div class="card-box box-3" style="margin-bottom: 20px;">
+          <h3>قيمنا</h3>
           <ul>
             <li>البناء النفسي</li>
             <li>البناء الفكري</li>
@@ -313,15 +347,9 @@
           </ul>
         </div>
       </div>
-      
-      
-      
-
-
     </div>
 
   </div>
-
 </section>
 
 <!-- SERVICES -->
