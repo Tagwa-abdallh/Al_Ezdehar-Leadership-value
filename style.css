@@ -86,26 +86,54 @@ IMPORT
 /******************************************
 SKELETON
 ******************************************/
+/* ==========================
+   الأحجام الأساسية للموقع
+========================== */
+:root {
+    /* أحجام الخطوط */
+    --font-size-small: 14px;
+    --font-size-normal: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-title: 30px;
+    --font-size-hero: 45px;
+
+    /* المسافات */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+    --spacing-section: 80px;
+
+    /* ارتفاع الهيدر */
+    --header-height: 100px;
+
+    /* عرض الشعار */
+    --logo-height: 100px;
+}
 
 body {
     background-color: #f6f6f6;
     line-height: 1.6;
-    
-    font-family:   system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif'Cairo', 'Roboto', sans-serif;
-    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
     color: #a2a2a2;
     direction: rtl;
     text-align: right;
-     text-decoration:none;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 body,
 p,
 li,
-a {
-    font-family: 'Roboto', sans-serif;
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cairo', sans-serif;
 }
-
 .course-details h4 a,
 .readmore,
 .testimonial strong,
@@ -126,7 +154,42 @@ h5,
 h6 {
     line-height: 1.5;
 }
+h1{
+    font-size: 50px;
+}
 
+h2{
+    font-size: 32px;
+}
+
+h3{
+    font-size: 28px;
+}
+
+h4{
+    font-size: 22px;
+}
+
+h5{
+    font-size: 18px;
+}
+
+h6{
+    font-size: 16px;
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea{
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link{
+    font-size: 30px;
+}
 .cop-logo img,
 a {
     color: #000;
@@ -137,13 +200,15 @@ a {
 }
 
 .check li:before {
+   
+    left: 0;
     content: "\f00c";
     font-family: "FontAwesome";
     font-size: 16px;
-    left: 0;
     padding-right: 10px;
     position: relative;
     top: 2px;
+    color: #1e9df1;   /*  نفس لون mark */
 }
 
 
@@ -178,7 +243,7 @@ blockquote {
     font-family: 'Droid Serif', sans-serif;
     font-style: italic;
     border: 1px solid #eaeaea;
-    background-color: #f6f6f6;
+    background: #f6f6f6;
 }
 
 blockquote:after {
@@ -241,6 +306,12 @@ HEADER
 .phone {
     direction: ltr;
     unicode-bidi: bidi-override;
+}
+
+
+.navbar-brand img {
+    max-height: 80px; /* يمنع الشعار من الخروج وتخريب أبعاد القائمة */
+    width: auto;
 }
 .header {
     position: absolute;
@@ -622,6 +693,7 @@ ul li {
 PAGES
 ******************************************/
 
+
 .page-title h3 {
     margin-bottom: 10px !important;
 }
@@ -735,6 +807,19 @@ PAGES
 /******************************************
 EVENTS
 ******************************************/
+/* اللون الأساسي للزر */
+.btn-primary ,.btn-warning {
+    background-color: #82b440 !important; /* لون خلفية الزر */
+    color: #ffffff !important;            /* لون النص داخل الزر */
+    border-color: #82b440 !important;     /* لون إطار الزر */
+}
+
+/* لون الزر عند تمرير الماوس فوقه (Hover) */
+.btn-primary ,.btn-warning:hover {
+    background-color: #069943 !important; /* لون الخلفية عند التمرير (درجة أغمق مثلاً) */
+    border-color: #74a632 !important;
+    color: #ffffff !important;
+}
 
 .event-title.tagline-message h3 {
     font-size: 64px;
@@ -1053,6 +1138,7 @@ SECTIONS
 
 .section-title {
     margin-bottom: 45px;
+    
 }
 
 .text-widget h3,
@@ -1071,6 +1157,7 @@ SECTIONS
     font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
     color: #000000;
+    
 }
 
 .section.gb {
@@ -1079,7 +1166,38 @@ SECTIONS
 .section.institutions {
     background-color: #dadada;
 }
+/* 1. تفعيل نظام الفليكس على السطر المحتوي على الصناديق */
+.institutionsbook ,.book .row {
+    display: flex !important;
+    flex-wrap: wrap; /* لضمان نزول الصناديق لأسفل في الشاشات الصغيرة */
+}
 
+/* 2. إعادة ترتيب الصناديق باستخدام خاصية order */
+
+.institutions ,.book .box-1 { 
+    order: 1 !important; /* سيكون الأول: إلكترك ترست */
+}
+
+.institutions ,.book .box-4 { 
+    order: 4 !important; /* سيكون الثاني: فريق الحياة */
+}
+
+.institutions ,.book .box-3 { 
+    order: 3 !important; /* سيكون الثالث: مكتبة الفكر */
+}
+
+.institutions ,.book .box-2 { 
+    order: 2 !important; /* سيكون الرابع والأخير: المركز الأعلى للتدريب */
+}
+.foter .box1{
+    order: 1 !important;
+}
+.foter .box2{
+    order: 2 !important;
+}
+.foter .box3{
+    order: 3 !important;
+}
 .section.db {
     background-color: #000000;
 }
@@ -1100,24 +1218,22 @@ SECTIONS
     height: 100vh;
 }
 
-.bg-video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+.video-section {
+    position: relative;
+    overflow: hidden;
 }
 
-.overlay{
+.bg-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 1;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
 }
 
 .home-text-wrapper{
@@ -1166,18 +1282,21 @@ SECTIONS
 }
 
 .home-message p  {
-    font-size: 45px;
+    font-size: 40px;
     color: #dde5e6;
     padding: 0;
     margin: 0;
+    padding-bottom: 40px;
     font-weight: 700;
+    order: 3;
 }
 .home-message h3 {
-    font-size: 45px;
+    font-size: 35px;
     color: #ffffff;
     padding: 0;
     margin: 0;
     font-weight: 700;
+    order: 1;
 }
 .l1 { color: rgb(127, 248, 147); }
 .l2 { color: rgb(78, 78, 236); }
@@ -1185,19 +1304,44 @@ SECTIONS
 .l4 { color: rgb(245, 225, 116); }
 
 .home-message small {
-    color: #2cff3d;
+    color: #00eb14;
     font-size: 25px;
     font-family: 'Droid Serif', sans-serif;
-    font-style: italic;
     display: block;
-    padding: 20px 0 35px;
+    padding: 10px 0 5px;
     margin: 0;
+    order: 2;
 }
+
+mark {
+    background-color: #1e9df1;
+    color: #fff;
+    padding: 1px 3px;
+    display: inline-block;
+    line-height: 1.3;
+
+    margin: 1px 0;   /*  المسافة فوق وتحت */
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
 
 .nopadtop {
     padding-top: 0 !important;
 }
+/* تغيير لون وحجم جميع الأيقونات داخل صناديق الخدمات */
+.box i[class^="flaticon-"], 
+.box i[class*=" flaticon-"] {
+    color: #0070cc !important; /* لون الأيقونة الأساسي (مثال: أزرق) */
+    font-size: 40px;           /* يمكنك التحكم في حجم الأيقونة من هنا */
+    margin-bottom: 15px;       /* مسافة أسفل الأيقونة قبل العنوان */
+    display: inline-block;
+}
 
+/* تأثير اختياري: تغيير لون الأيقونة عند تمرير الماوس فوق الصندوق */
+.box:hover i[class^="flaticon-"] {
+    color: #3788d4 !important; /* يتغير لونها للذهبي مثلاً عند التمرير */
+}
 .box {
     background-color: #ffffff;
     padding: 4rem;
@@ -1836,18 +1980,22 @@ TESTIMONIAL
     padding-left: 4rem;
 }
 
-.custom-module h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0 20px;
-    padding: 0;
-}
 
 .custom-module mark {
+    margin: 0 0 3px 3px;
+    display: inline-block;
+}
+
+.custom-module h2 {
+    margin: 0 0 0px;
+    font-size: 25px;
+}
+
+/* .custom-module mark {
     line-height: 1;
     color: #ffffff;
     padding: 0 10px;
-}
+} */
 
 .custom-module p {
     padding: 0;
@@ -2223,7 +2371,7 @@ blockquote:after,
 .yamm h4,
 .yamm-content li:hover a,
 .yamm .hassubmenu li:hover a,
-.check li:before,
+
 .stat-count h3,
 .blog-desc h4:hover a,
 .post-meta li:after,
@@ -2234,7 +2382,7 @@ a:hover,
 a:focus,
 .box i,
 .topbar .text-left i {
-    color: #01bacf;
+    color: #0070cc;
 }
 
 .shop-extra .nav-tabs>li:hover a,
@@ -2242,7 +2390,7 @@ a:focus,
 .modal .form-control,
 .form-control:focus,
 .btn-transparent {
-    border-color: #01bacf !important;
+    border-color: #0161cf !important;
 }
 
 .cb,
@@ -2258,14 +2406,14 @@ a:focus,
 .owl-theme-01 .owl-nav [class*="owl-"]:hover,
 .yamm .dropdown-menu li:hover .menu-button,
 .yamm .dropdown-menu li .menu-button,
-mark,
+
 .bgcolor1,
 .image-wrap:before,
 .image-wrap:after,
 .btn-primary {
-    border-color: #01bacf;
-    background-color: #01bacf;
-    box-shadow: inset 0 0 0 0 #00a8bd;
+    border-color: #0027d3;
+    background-color: #016bcf;
+    box-shadow: inset 0 0 0 0 #0071bd;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
@@ -2539,3 +2687,62 @@ RESPONSIVE
     color: #0d6efd;
     text-decoration: underline;
 }
+
+/* --- تخصيص ألوان قسم مؤسساتنا --- */
+
+/* 1. لون العناوين الرئيسية للصناديق */
+.institutions .blog-desc h4 a {
+    color: #0069cc !important; /* اللون الأزرق الملكي المقترح للهوية */
+    font-weight: bold;
+}
+
+/* 2. لون العناوين عند تمرير الماوس فوقها */
+.institutions .blog-desc h4 a:hover {
+    color: #378dd4 !important; /* يتحول للذهبي عند التمرير */
+}
+
+/* 3. لون نصوص الوصف الداخلي */
+.institutions .blog-desc p {
+    color: #555555 !important; /* رمادي غامق مريح للعين والقراءة */
+    font-size: 15px;
+}
+
+/* 4. لون التواريخ والأسماء الإنجليزية في الأسفل (Post Meta) */
+.institutions .post-meta ul li a {
+    color: #999999 !important; /* رمادي فاتح مائل للأناقة */
+    font-size: 13px;
+}
+
+/* 5. تأثير التمرير على الروابط السفلية */
+.institutions .post-meta ul li a:hover {
+    color: #007acc !important; /* يعود للأزرق عند التمرير */
+}
+
+/* 6. تغيير لون خلفية الصندوق بالكامل وتأثير الظل (اختياري وفخم) */
+.institutions .blog-box {
+    background-color: #ffffff !important; /* خلفية بيضاء ناصعة */
+    border: 1px solid #eaeaea;
+    border-radius: 8px; /* حواف دائرية خفيفة */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* تأثير ارتياح الصندوق وظهور ظل خفيف عند التمرير فوق الصندوق نفسه */
+.institutions .blog-box:hover {
+    transform: translateY(-5px); /* يرتفع الصندوق قليلاً */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* ظل ناعم */
+}
+/* التحكم في لون الطبقة التي تظهر فوق الصورة عند التمرير */
+.image-wrap:hover .magnifier {
+    background-color: rgba(12, 149, 228, 0.582) !important; /* اللون الأزرق الملكي الخاص بموقعك مع شفافية 70% */
+}
+
+/* تغيير لون أيقونة الزائد (flaticon-add) داخل الطبقة */
+.image-wrap:hover .magnifier i {
+    color: #ffffff !important; /* تحويل لون الأيقونة للأبيض الناصع */
+}
+/* 1. تغيير لون أيقونة الزائد إلى الأزرق في الحالة العادية */
+.flaticon-add:before {
+    color: #0070cc !important; /* درجة الأزرق الملكي المتناسقة مع موقعك */
+}
+
